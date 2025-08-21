@@ -7,7 +7,6 @@ html {
 
 body {
 	margin: auto;
-	max-width: 1024px;
 	font-size: 13px;
 	font-family: "Roboto", sans-serif;
 	line-height: 25px;
@@ -25,29 +24,21 @@ a {
 
 figure {
 	margin: auto;
-	padding: 0;
 	position: relative;
 }
 
 figure.canvas_wrapper {
+	margin: auto;
+	background: #fff;
+}
+
+.wrapper {
 	display: flex;
-	flex-wrap: wrap;
-	flex-direction: column;
 	margin: auto;
-	background: #101010;
+	max-width: 1280px;
 }
 
-
-canvas#canvas {
-	display: block;
-	margin: auto;
-}
-
-canvas#canvas:hover {
-	cursor: pointer;
-}
-
-#coords {
+#hud {
 	flex-grow: 1;
 	padding: 2%;
 	align-content: center;
@@ -56,27 +47,44 @@ canvas#canvas:hover {
 	text-align: center;
 }
 
-#clock {
-	width: 96%;
+canvas#canvas {
+	display: block;
+	margin: auto;
+}
+
+@media screen and (max-width:1024px) {
+	canvas#canvas {
+
+		width: 100%;
+	}
+}
+
+#game {
+	background: #111111;
+}
+
+canvas#canvas:hover {
+	cursor: pointer;
+}
+
+#footer {
+	background: #303030;
+}
+
+nav.navigation {
+	display: flex;
 	flex-grow: 1;
+	margin: auto;
 	padding: 2%;
 	text-align: center;
-	background: #303030;
 	color: #cecece;
 }
 
-#clock {
-	color: #ccc;
-}
-
-#clock a {
-	color: lime;
-}
-
-ul.footer-menu {
+nav.navigation ul {
 	position: relative;
 	display: flex;
-	margin: auto;
+	margin: 0;
+	padding: 0;
 	flex-grow: 1;
 	flex-wrap: wrap;
 	flex-direction: row;
@@ -84,7 +92,38 @@ ul.footer-menu {
 	list-style-type: none;
 }
 
-ul.footer-menu li {
+@media screen and (max-width:1024px) {
+	nav.navigation ul {
+		flex-direction: column;
+	}
+}
+
+nav.navigation ul li {
 	flex-grow: 1;
 	padding: 1%;
+}
+
+
+@media screen and (max-width:1024px) {
+	nav.navigation ul li {
+		padding: 3%;
+		border-top: 1px solid rgba(255, 255, 255, 0.25);
+	}
+}
+
+nav.navigation li a {
+	color: lime;
+}
+
+#footer-info {
+	margin: auto;
+	flex-grow: 1;
+	padding: 2%;
+	background: #101010;
+	color: gold;
+	text-align: center;
+}
+
+#footer-info a {
+	color: lime;
 }
