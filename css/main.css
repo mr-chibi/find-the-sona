@@ -52,13 +52,6 @@ canvas#canvas {
 	margin: auto;
 }
 
-@media screen and (max-width:1024px) {
-	canvas#canvas {
-
-		width: 100%;
-	}
-}
-
 #game {
 	background: #111111;
 }
